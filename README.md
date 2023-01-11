@@ -34,4 +34,3 @@ An online judge to practice problems
 4. **Solve problem** : A  User can also solve problems created by others and know about the verdict of the problem. They can do multiple submission and see the previous verdicts and code of their submission
 5. **Filtering** :  A user will be able to filter problems based on difficulty and title.
 6. **Submission Panel** : A user will be able to see the publicly available submission data and will also be able to filter them based on different criterias.
-7. **Languages** : C++ , Python language can be used to solve a problem.
