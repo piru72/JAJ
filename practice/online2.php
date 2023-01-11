@@ -17,13 +17,22 @@ $given_string = "HEELO PARVE/Z";
 strip_string($given_string);
 
 echo "<br><br>TASK 1<br> <br>";
-function find_price($prices, $product )
+function find_price($prices, $key )
 {
-    echo "WORKING";
+    
+    foreach($prices as $product => $price)
+        {
+
+            if ($price == $key)
+                return "FOUND";
+
+        }
+
+        return "NOT FOUND";
 }
 
 $prices = array("Pen" => "20" , "Chal" => "40" , "Dal" => "40");
 
-find_price($prices, "Pen");
+echo find_price($prices, "200");
 
 ?>
