@@ -1,4 +1,4 @@
-# JAJ (Just Another Judje)
+# JAJ (Just Another Judge)
 
 An online judge to practice problems
 
