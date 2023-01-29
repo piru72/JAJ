@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"c:\\xampp\\htdocs\\JAJ\\API_TEST\\test.cpp","tests":[{"id":1674948799151,"input":"3\n1 2 3","output":"case : 1\nAC\ncase : 2\nAC\nAC\ncase : 3\nAC\nAC\nAC"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\xampp\\htdocs\\JAJ\\API_TEST\\test.cpp","group":"local","local":true}
