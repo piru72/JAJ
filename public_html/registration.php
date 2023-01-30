@@ -68,7 +68,7 @@ if (isset($_POST["EmailSignIN"])) {
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="signIn.php" method="post">
+            <form action="registration.php" method="post">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
@@ -84,7 +84,7 @@ if (isset($_POST["EmailSignIN"])) {
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="signIn.php" method="post">
+            <form action="registration.php" method="post">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
@@ -122,6 +122,8 @@ if (isset($_POST["EmailSignIN"])) {
 
     <script src="js/singup.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
+
 
 </body>
 
