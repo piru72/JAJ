@@ -15,15 +15,37 @@ if (isset($_POST["FullName"])) {
 
     $sql = "INSERT INTO users (FullName, UserName, Email, password) VALUES ('$FullName', '$UserName','$Email', '$password')";
 
-    if ($link->query($sql) === TRUE) {
+    if ($connect->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $link->error;
+        echo "Error: " . $sql . "<br>" . $connect->error;
     }
 }
 
+if (isset($_POST["EmailSignIN"])) {
 
 
+    $EmailSignIN =  $_POST["EmailSignIN"];
+    $passwordSignIn =  $_POST["passwordSignIn"];
+
+    $email = mysqli_real_escape_string($connect, $_POST['EmailSignIN']);
+    $password = mysqli_real_escape_string($connect, $_POST['passwordSignIn']);
+
+
+
+
+    $sql = "SELECT * FROM users WHERE Email = '$email' AND password = '$password'";
+    $result = mysqli_query($connect, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        header("Location: index.php");
+        exit;
+    } else {
+
+        echo "Wrong email or password";
+    }
+    mysqli_close($connect);
+}
 
 
 
@@ -62,7 +84,7 @@ if (isset($_POST["FullName"])) {
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="signIn.php" method="post">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
@@ -70,8 +92,8 @@ if (isset($_POST["FullName"])) {
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" name="EmailSignIN" placeholder="Email" />
+                <input type="password" name="passwordSignIn" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
                 <button>Sign In</button>
             </form>

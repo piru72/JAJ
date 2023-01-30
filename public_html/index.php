@@ -42,7 +42,7 @@
                     </li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                    <button class="btn btn-primary">Sign In</button>
+                    <button onclick="window.location.href='signIn.php'" class="btn btn-primary">Sign In</button>
                 </div>
             </div>
         </div>
