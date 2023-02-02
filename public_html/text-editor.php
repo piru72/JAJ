@@ -22,7 +22,7 @@
         }
 
         .code-editor {
-            height: 80vh;
+            height: 60vh;
         }
     </style>
 </head>
@@ -38,18 +38,7 @@
                     <p><strong>Sample Output:</strong> output1</p>
                     <p><strong>Notes:</strong> notes</p>
                 </div>
-                <div class="test-cases">
-                    <h4>Test Cases</h4>
-                    <div class="form-group">
-                        <label for="inputTestCase">Input Test Case</label>
-                        <input type="text" class="form-control" id="inputTestCase">
-                    </div>
-                    <button class="btn btn-primary">Test</button>
-                    <button class="btn btn-primary">Submit</button>
-
-                    <label for="source_code" class="form-label">Select Source Code:</label>
-                    <input required class="form-control" type="file" name="source_code" id="">
-                </div>
+               
             </div>
             <div class="col-md-8 right-column">
                 <h4>Select Language</h4>
@@ -60,6 +49,19 @@
                 </select>
                 <h4>Text Editor</h4>
                 <textarea class="form-control code-editor"></textarea>
+                <div class="test-cases">
+                    <h4>Test Cases</h4>
+                    <div class="form-group">
+                        <label for="inputTestCase">Input Test Case</label>
+                        <textarea class="form-control "></textarea>
+                    </div>
+                  
+                    <button class="btn btn-primary">Test</button>
+                    <button class="btn btn-primary">Submit</button>
+                    
+
+                
+                </div>
 
             </div>
         </div>
