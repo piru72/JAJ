@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../public_html/css/style.css">
+    <link rel="stylesheet" href="../resources/library/css/bootstrap.min.css">
+    <title>JAJ | Problem</title>
+</head>
+<body>
+
+        <!--Navigation Section-->
+
+        <nav class="navbar navbar-expand-lg bg-light rounded">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#centeredNav" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse d-lg-flex" id="centeredNav">
+                    <a class="navbar-brand col-lg-3 me-0" href="#">JAJ</a>
+                    <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Problems</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Submissions</a>
+                        </li>
+                    </ul>
+                    <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+                        <button onclick="window.location.href='registration.php'" class="btn btn-primary">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+        <!--End of Navigation Section-->
+        
+    <div class="container-fluid" style="margin-top: 20px">
+        <div class="row">
+          <div class="col-md-8">
+            <!-- Nav tabs for problem statement and submissions -->
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#problem-statement">Problem Statement</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#submissions">Submissions</a>
+              </li>
+            </ul>
+      
+            <!-- Tab panes for problem statement and submissions -->
+            <div class="tab-content">
+              <!-- Problem statement tab -->
+              <div id="problem-statement" class="container tab-pane active">
+                <br>
+                <p>
+                  Given two integers A and B, your task is to calculate the sum of A and B.
+                </p>
+                <p>
+                  Input: The input will contain two integers A and B in the same line separated by a space.
+                </p>
+                <p>
+                  Output: The output should contain an integer, the sum of A and B.
+                </p>
+              </div>
+              
+              <!-- Submissions tab -->
+              <div id="submissions" class="container tab-pane fade">
+                <br>
+                <!-- Add code here for submissions tab -->
+              </div>
+            </div>
+          </div>
+      
+          <!-- Second column for code block and programming language dropdown -->
+          <div class="col-md-4">
+            <!-- Programming language dropdown -->
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Language
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">C++</a>
+                <a class="dropdown-item" href="#">Java</a>
+                <a class="dropdown-item" href="#">Python</a>
+              </div>
+            </div>
+            <br><br>
+            <!-- Code block -->
+            <textarea class="form-control" rows="10"></textarea>
+            <br>
+            <!-- Submit button -->
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+
+
+        <!--footer section-->
+        <footer>
+            <p>
+                Made with <i class="fa fa-heart"></i> by Freon Devs
+            </p>
+        </footer>
+
+        <!--End of footer section-->
+
+        <script src="js/singup.js" crossorigin="anonymous"></script>
+        <script src="/resources/library/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+
+</body>
+</html>
