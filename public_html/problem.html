@@ -11,6 +11,8 @@
 </head>
 <body>
 
+<div class="container-fluid">
+
         <!--Navigation Section-->
 
         <nav class="navbar navbar-expand-lg bg-light rounded">
@@ -84,16 +86,16 @@
           <!-- Second column for code block and programming language dropdown -->
           <div class="col-md-4">
             <!-- Programming language dropdown -->
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Select Language
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">C++</a>
-                <a class="dropdown-item" href="#">Java</a>
-                <a class="dropdown-item" href="#">Python</a>
+              <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select Language
+                  </button>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">C</a></li>
+                      <li><a class="dropdown-item" href="#">C++</a></li>
+                      <li><a class="dropdown-item" href="#">Java</a></li>
+                  </ul>
               </div>
-            </div>
             <br><br>
             <!-- Code block -->
             <textarea class="form-control" rows="10"></textarea>
@@ -115,8 +117,9 @@
         <!--End of footer section-->
 
         <script src="js/singup.js" crossorigin="anonymous"></script>
-        <script src="/resources/library/js/bootstrap.bundle.min.js"></script>
+        <script src="../resources/library/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
 
+    </div>
 </body>
 </html>
