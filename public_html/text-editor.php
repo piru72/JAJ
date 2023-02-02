@@ -38,35 +38,63 @@
                     <p><strong>Sample Output:</strong> output1</p>
                     <p><strong>Notes:</strong> notes</p>
                 </div>
-               
+
             </div>
             <div class="col-md-8 right-column">
-                <h4>Select Language</h4>
-                <select class="form-control">
-                    <option>Language 1</option>
-                    <option>Language 2</option>
-                    <option>Language 3</option>
-                </select>
-                <h4>Text Editor</h4>
-                <textarea class="form-control code-editor"></textarea>
-                <div class="test-cases">
-                    <h4>Test Cases</h4>
-                    <div class="form-group">
-                        <label for="inputTestCase">Input Test Case</label>
-                        <textarea class="form-control "></textarea>
-                    </div>
-                  
-                    <button class="btn btn-primary">Test</button>
-                    <button class="btn btn-primary">Submit</button>
-                    
+                <form id="submit-form">
 
-                
-                </div>
+                    <h4>Select Language</h4>
+
+                    <select name="language" class="form-control">
+                        <option value="42">C++</option>
+                        <option value="43">Java</option>
+                        <option value="44">Python</option>
+                    </select>
+
+                    <h4>Text Editor</h4>
+                    <textarea name="sourceCode" class="form-control code-editor"></textarea>
+
+                    <div class="test-cases">
+
+                        <h4>Test Cases</h4>
+
+                        <div class="form-group">
+
+                            <label>Input Test Case</label>
+                            <textarea name="testCase" class="form-control "></textarea>
+
+                        </div>
+
+                        <button class="btn btn-primary">Test</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+                    </div>
+                </form>
+                <iframe name="submit-iframe" style="display: none;"></iframe>
 
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script>
+        const submitForm = document.querySelector('#submit-form');
+        submitForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(submitForm);
+            fetch('./Controller/submission.php', {
+                    method: 'post',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(result => {
+                    alert(result);
+
+                });
+        });
+    </script>
+
 
 </body>
 
