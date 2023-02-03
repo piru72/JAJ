@@ -46,9 +46,9 @@
                     <h4>Select Language</h4>
 
                     <select name="language" class="form-control">
-                        <option value="42">C++</option>
-                        <option value="43">Java</option>
-                        <option value="44">Python</option>
+                        <option value="54">C++ (GCC 9.2.0)</option>
+                        <option value="62">Java (OpenJDK 13.0.1)</option>
+                        <option value="71">Python (3.8.1)</option>
                     </select>
 
                     <h4>Text Editor</h4>
