@@ -2,41 +2,39 @@
 <html>
 
 <head>
+    <title>JAJ</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        .left-column {
-            background-color: #f2f2f2;
-            padding: 20px;
-            height: 100vh;
 
-            resize: horizontal;
-            overflow: auto;
-        }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        .right-column {
-            background-color: #ffffff;
-            padding: 20px;
-            height: 100vh;
-        }
+    <!-- Custom CSS-->
 
-        .code-editor {
-            height: 60vh;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ide.css">
 </head>
 
 <body>
+
+    <!--Navigation Section-->
+
+    <?php include './View/partials/header.php'; ?>
+
+    <!--End of Navigation Section-->
     <div class="container-fluid">
         <div class="row main">
             <div class="col-md-4 left-column">
                 <div class="problem-details">
-                    <h4>Problem Name</h4>
-                    <p><strong>Sample Description</strong> input1</p>
-                    <p><strong>Sample Input:</strong> input1</p>
-                    <p><strong>Sample Output:</strong> output1</p>
-                    <p><strong>Notes:</strong> notes</p>
+                    <h4>Fetch From</h4>
+                    <select name="language" class="form-control">
+                        <option value="54">Codeforces</option>
+                        <option value="62">CodeChef</option>
+                        <option value="71">Toph</option>
+                    </select>
+                    <h4>Problem Code</h4>
+                    <textarea name="sourceCode" class="form-control"></textarea>
                 </div>
 
             </div>
@@ -46,9 +44,9 @@
                     <h4>Select Language</h4>
 
                     <select name="language" class="form-control">
-                        <option value="42">C++</option>
-                        <option value="43">Java</option>
-                        <option value="44">Python</option>
+                        <option value="54">C++ (GCC 9.2.0)</option>
+                        <option value="62">Java (OpenJDK 13.0.1)</option>
+                        <option value="71">Python (3.8.1)</option>
                     </select>
 
                     <h4>Text Editor</h4>
