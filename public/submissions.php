@@ -34,18 +34,54 @@
                 <div class="table-responsive">
 
                     <table class="table table-striped table-hover align-middle" id="myTable">
+
+
+                        <?php
+
+                        include "./Database/Connection.php";
+
+                        $query = "select * , u.UserName  from submissions , users u  where u.id = submissions.who";
+                        $result = mysqli_query($connect, $query);
+
+
+                        echo '
                         <thead class="thead-light">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">When</th>
-                                <th scope="col">Who</th>
-                                <th scope="col">Problem</th>
-                                <th scope="col">Lang</th>
-                                <th scope="col">Verdict</th>
-                                <th scope="col">Time</th>
-                                <th scope="col">Memory</th>
-                            </tr>
-                        </thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">When</th>
+                        <th scope="col">Who</th>
+                        <th scope="col">Problem</th>
+                        <th scope="col">Lang</th>
+                        <th scope="col">Verdict</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Memory</th>
+                        </tr>
+                        </thead>';
+
+
+
+                        while ($row = mysqli_fetch_array($result)) {
+
+                            $time = $row['time'] * 1000;
+                            echo "<tbody>
+                          <tr>
+                          <td>" . $row['id'] . "</td>
+                          <td>" . $row['created_at'] . "</td>
+                          <td>" . $row['UserName'] . "</td>
+                          <td>" . $row['problem']  . "</td>
+                          <td>" . $row['lang'] . "</td>
+                          <td>" . $row['verdict'] . "</td>
+                          <td>" . $time . ' ms' . "</td>
+                          <td>" .  $row['memory'] . ' kb'. "</td>
+
+                        </tr>
+                        </tbody>";
+                        }
+
+
+                        ?>
+
+
 
                     </table>
                 </div>
