@@ -29,22 +29,22 @@
                 <a class="navbar-brand col-lg-3 me-0" href="#">JAJ</a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" onclick="window.location.href='index.php'">Home</a>
+                        <a class="nav-link"  href ="#" onclick="window.location.href='index.php'">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="window.location.href='problemset.php'">Problemset</a>
+                        <a class="nav-link"  onclick="window.location.href='problemset.php'">Problemset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" onclick="window.location.href='leaderboard.php'">Leaderboard</a>
+                        <a class="nav-link"  onclick="window.location.href='leaderboard.php'">Leaderboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="window.location.href='submissions.php'">Submissions</a>
+                        <a class="nav-link"  onclick="window.location.href='submissions.php'">Submissions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="window.location.href='createProblem.php'">Create Problem</a>
+                        <a class="nav-link"  onclick="window.location.href='createProblem.php'">Create</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="window.location.href='ide.php'">IDE</a>
+                        <a class="nav-link"  onclick="window.location.href='ide.php'">IDE</a>
                     </li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
@@ -60,13 +60,13 @@
     <div class="container-fluid">
         <div class="row" style="margin-top: 20px">
             <div class="col-8 text-center" style="margin-right:30px;">
-                <button class="btn btn-outline-secondary btn-lg btn-square m-1">
+                <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='createProblem.php'">
                     <i class="fas fa-plus"></i> Add Problems
                 </button>
-                <button class="btn btn-outline-secondary btn-lg btn-square m-1">
+                <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='problemset.php'">
                     <i class="fas fa-pen"></i> Solve Problems
                 </button>
-                <button class="btn btn-outline-secondary btn-lg btn-square m-1">
+                <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='leaderboard.php'">
                     <i class="fas fa-trophy"></i> Leaderboard
                 </button>
             </div>

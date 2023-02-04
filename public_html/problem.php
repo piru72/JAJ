@@ -41,19 +41,19 @@
                 <a class="navbar-brand col-lg-3 me-0" href="#">JAJ</a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" onclick="window.location.href='index.php'">Home</a>
+                        <a class="nav-link"  onclick="window.location.href='index.php'">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="window.location.href='problemset.php'">Problemset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" onclick="window.location.href='leaderboard.php'">Leaderboard</a>
+                        <a class="nav-link"  onclick="window.location.href='leaderboard.php'">Leaderboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="window.location.href='submissions.php'">Submissions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="window.location.href='createProblem.php'">Create Problem</a>
+                        <a class="nav-link" href="#" onclick="window.location.href='createProblem.php'">Create</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="window.location.href='ide.php'">IDE</a>
