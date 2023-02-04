@@ -42,25 +42,25 @@
                 <a class="navbar-brand col-lg-3 me-0" href="#">JAJ</a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link"  onclick="window.location.href='index.php'">Home</a>
+                        <a class="nav-link" onclick="window.location.href='index.php'">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  onclick="window.location.href='problemset.php'">Problemset</a>
+                        <a class="nav-link" onclick="window.location.href='problemset.php'">Problemset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  onclick="window.location.href='leaderboard.php'">Leaderboard</a>
+                        <a class="nav-link" onclick="window.location.href='leaderboard.php'">Leaderboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  onclick="window.location.href='submissions.php'">Submissions</a>
+                        <a class="nav-link" onclick="window.location.href='submissions.php'">Submissions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  onclick="window.location.href='createProblem.php'">Create</a>
+                        <a class="nav-link" onclick="window.location.href='createProblem.php'">Create</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="window.location.href='ide.php'">IDE</a>
+                        <a class="nav-link" onclick="window.location.href='ide.php'">IDE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  onclick="window.location.href='debugger.php'">Debugger</a>
+                        <a class="nav-link" href="#" onclick="window.location.href='debugger.php'">Debugger</a>
                     </li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
@@ -73,32 +73,31 @@
     <!--End of Navigation Section-->
     <div class="container-fluid">
         <div class="row main">
-            <div class="col-md-4 left-column">
+            <div class="col-md-8 left-column">
+                
                 <div class="problem-details">
-                    <h4>Fetch From</h4>
-                    <select name="language" class="form-control">
-                        <option value="54">Codeforces</option>
-                        <option value="62">CodeChef</option>
-                        <option value="71">Toph</option>
-                    </select>
-                    <h4>Problem Code</h4>
-                    <textarea name="sourceCode" class="form-control"></textarea>
+                    <form id="submit-form">
+
+                        <h4>Select Language</h4>
+
+                        <select name="language" class="form-control">
+                            <option value="54">C++ (GCC 9.2.0)</option>
+                            <option value="62">Java (OpenJDK 13.0.1)</option>
+                            <option value="71">Python (3.8.1)</option>
+                        </select>
+
+                        <h4>Source Code</h4>
+                        <textarea name="sourceCode" class="form-control code-editor"></textarea>
+
+                        
+                    </form>
                 </div>
 
             </div>
-            <div class="col-md-8 right-column">
+            <div class="col-md-4 right-column">
                 <form id="submit-form">
 
-                    <h4>Select Language</h4>
-
-                    <select name="language" class="form-control">
-                        <option value="54">C++ (GCC 9.2.0)</option>
-                        <option value="62">Java (OpenJDK 13.0.1)</option>
-                        <option value="71">Python (3.8.1)</option>
-                    </select>
-
-                    <h4>Text Editor</h4>
-                    <textarea name="sourceCode" class="form-control code-editor"></textarea>
+                    
 
                     <div class="test-cases">
 
@@ -110,8 +109,13 @@
                             <textarea name="testCase" class="form-control "></textarea>
 
                         </div>
+                        <div class="form-group">
 
-                        <button class="btn btn-primary">Test</button>
+                            <label>Expected Output</label>
+                            <textarea name="expectedOutput" class="form-control "></textarea>
+
+                        </div>
+
                         <button type="submit" class="btn btn-primary">Submit</button>
 
 

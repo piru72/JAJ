@@ -46,6 +46,9 @@
                     <li class="nav-item">
                         <a class="nav-link" onclick="window.location.href='ide.php'">IDE</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  onclick="window.location.href='debugger.php'">Debugger</a>
+                    </li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                     <button onclick="window.location.href='registration.php'" class="btn btn-primary">Sign In</button>
