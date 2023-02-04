@@ -19,7 +19,7 @@
 
     <!--Navigation Section-->
 
-    <?php include 'header.php'; ?>
+    <?php include './View/partials/header.php'; ?>
 
     <!--End of Navigation Section-->
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>JAJ</title>
+    <title>JAJ</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,7 +20,7 @@
 
     <!--Navigation Section-->
 
-    <?php include 'header.php'; ?>
+    <?php include './View/partials/header.php'; ?>
 
     <!--End of Navigation Section-->
 
