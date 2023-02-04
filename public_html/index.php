@@ -29,16 +29,22 @@
                 <a class="navbar-brand col-lg-3 me-0" href="#">JAJ</a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" onclick="window.location.href='index.php'">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contest</a>
+                        <a class="nav-link" href="#" onclick="window.location.href='problemset.php'">Problemset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Problems</a>
+                        <a class="nav-link" aria-current="page" onclick="window.location.href='leaderboard.php'">Leaderboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Submissions</a>
+                        <a class="nav-link" href="#" onclick="window.location.href='submissions.php'">Submissions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="window.location.href='createProblem.php'">Create Problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="window.location.href='ide.php'">IDE</a>
                     </li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
@@ -66,10 +72,10 @@
             </div>
             <div class="col-3 d-flex justify-content-center" style="background-color: white; height: 60px; border-radius: 10px">
                 <h5 style="margin-top: 20px"><i class="fas fa-bullhorn"></i> Announcements</h5>
-    
+
             </div>
 
-           
+
             <div class="container-fluid">
                 <div class="col-8" style="margin-top: 20px">
                     <div class="card bg-light">
@@ -93,26 +99,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <h4>Leaderboard</h4>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Handle</th>
-                            <th>Solved</th> 
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                   
-                        <tr>
-                            <td>Parvez</td>
-                            <td>100</td>
-                        
-                        </tr>
-                        
-                    </tbody>
-                </table>
             </div>
 
             <!-- <div class="container-fluid">
@@ -149,7 +135,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js" integrity="sha512-zKaK6G2LZC5YZTX0vKmD7xOwd1zrEEMal4zlTf5Ved/A1RrnW+qt8pWDfo7oz+xeChECS/P9dv6EDwwPwelFfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         var typed = new Typed('.welcome', {
-            strings: ["WELCOME TO FEC OJ(BETA)", "The Place for Competitive Programmers"],
+            strings: ["WELCOME TO JAJ(BETA)", "The Place for Competitive Programmers"],
             typeSpeed: 200
         });
     </script>
