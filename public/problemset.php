@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>JAJ</title>
+    <title>JAJ</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,19 +32,50 @@
 
                 <div class="table-responsive">
                     <table class="table table-striped">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>Id</th>
-                                <th>Title</th>
-                                <th>Status</th>
-                                <th>Accuracy</th>
-                                <th>Author</th>
-                                <th>Difficulty</th>
 
-                                <th>CPU Limit</th>
-                                <th>Memory Limit</th>
-                            </tr>
-                        </thead>
+
+                        <?php
+
+                        include "./Database/Connection.php";
+
+                        $query = "select ps.id ,ps.title, u.UserName from problem_sets ps , users u where ps.author = u.id ";
+                        $result = mysqli_query($connect, $query);
+
+
+                        echo "
+						<thead class=\"thead-light\">
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Status</th>
+                            <th>Accuracy</th>
+                            <th>Author</th>
+                            <th>Difficulty</th>
+                        </tr>
+                        </thead>";
+
+
+
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo "<tbody>
+						  <tr>
+						  <td>" . $row['id'] . "</td>
+						  <td>" . $row['title'] . "</td>
+						  <td>" . 'Unsolved' . "</td>
+						  <td>" . 'Accuracy' . "</td>
+                          <td>" . $row['UserName'] . "</td>
+						  <td>" . 'Hard' . "</td>
+						  
+						</tr>
+						</tbody>";
+                        }
+
+                        ?>
+
+
+
+
+
                     </table>
                 </div>
 
