@@ -43,7 +43,7 @@
                         $query = "select * , u.UserName  from submissions , users u  where u.id = submissions.who";
                         $result = mysqli_query($connect, $query);
 
-
+                      
                         echo '
                         <thead class="thead-light">
                         <tr>
@@ -63,16 +63,21 @@
                         while ($row = mysqli_fetch_array($result)) {
 
                             $time = $row['time'] * 1000;
+                            $color  = 'red';
+                            if ($row['verdict'] == 'Accepted')
+                                $color = 'green';
+                                
                             echo "<tbody>
                           <tr>
-                          <td>" . $row['id'] . "</td>
+                          <td>" . "<a href=\"#\" class=\"show_code\">" . $row['id']. "</a>" . "</td>
                           <td>" . $row['created_at'] . "</td>
                           <td>" . $row['UserName'] . "</td>
                           <td>" . $row['problem']  . "</td>
                           <td>" . $row['lang'] . "</td>
-                          <td>" . $row['verdict'] . "</td>
+                          <td style=\"color:$color;\">" . $row['verdict'] . "</td>
                           <td>" . $time . ' ms' . "</td>
                           <td>" .  $row['memory'] . ' kb'. "</td>
+                    
 
                         </tr>
                         </tbody>";

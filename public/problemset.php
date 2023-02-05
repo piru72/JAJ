@@ -54,17 +54,17 @@
                         </tr>
                         </thead>";
 
-
+                       
 
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<tbody>
 						  <tr>
 						  <td>" . $row['id'] . "</td>
-						  <td>" . $row['title'] . "</td>
+						  <td>" . "<a href=\"problem.php\" >" . $row['title'] . "</a>" . "</td>
 						  <td>" . 'Unsolved' . "</td>
 						  <td>" . 'Accuracy' . "</td>
                           <td>" . $row['UserName'] . "</td>
-						  <td>" . 'Hard' . "</td>
+						  <td>" . "<span class=\"badge bg-success\"> Easy</span>" . "</td>
 						  
 						</tr>
 						</tbody>";
