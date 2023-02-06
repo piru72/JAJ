@@ -40,10 +40,15 @@
 
                         include "./Database/Connection.php";
 
-                        $query = "select * , u.UserName  from submissions , users u  where u.id = submissions.who";
+                        $query = "select s.id,s.created_at,s.problem,s.verdict,s.time,s.memory , u.UserName,l.lang  
+                        from submissions s 
+                        join users u  
+                        on u.id = s.who 
+                        join languages l 
+                        on l.id = s.lang";
                         $result = mysqli_query($connect, $query);
 
-
+                      
                         echo '
                         <thead class="thead-light">
                         <tr>
@@ -63,16 +68,21 @@
                         while ($row = mysqli_fetch_array($result)) {
 
                             $time = $row['time'] * 1000;
+                            $color  = 'red';
+                            if ($row['verdict'] == 'Accepted')
+                                $color = 'green';
+                                
                             echo "<tbody>
                           <tr>
-                          <td>" . $row['id'] . "</td>
+                          <td>" . "<a href=\"#\" class=\"show_code\">" . $row['id']. "</a>" . "</td>
                           <td>" . $row['created_at'] . "</td>
                           <td>" . $row['UserName'] . "</td>
                           <td>" . $row['problem']  . "</td>
                           <td>" . $row['lang'] . "</td>
-                          <td>" . $row['verdict'] . "</td>
+                          <td style=\"color:$color;\">" . $row['verdict'] . "</td>
                           <td>" . $time . ' ms' . "</td>
                           <td>" .  $row['memory'] . ' kb'. "</td>
+                    
 
                         </tr>
                         </tbody>";

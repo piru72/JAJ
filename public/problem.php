@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>JAJ</title>
+    <title>JAJ</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom CSS-->
-     <link rel="stylesheet" href="css/problem.css">
+    <link rel="stylesheet" href="css/problem.css">
 </head>
 
 <body>
@@ -23,13 +23,31 @@
     <div class="container-fluid">
         <div class="row main">
             <div class="col-md-4 left-column">
-                <div class="problem-details">
-                    <h4>Problem Name</h4>
-                    <p><strong>Sample Description</strong> input1</p>
-                    <p><strong>Sample Input:</strong> input1</p>
-                    <p><strong>Sample Output:</strong> output1</p>
-                    <p><strong>Notes:</strong> notes</p>
-                </div>
+
+                <?php
+
+                include "./Database/Connection.php";
+                $value = urldecode($_GET['value']);
+
+                $query = "select title ,statement, sample_input, sample_output,notes from problem_sets where id = $value ";
+                $result = mysqli_query($connect, $query);
+                $row = mysqli_fetch_array($result);
+
+                echo
+                " <div class=\"problem-details\">
+
+                <h4>Problem Name  <br><br><br>" .  $row['title'] . "<br><br><br> </h4>
+                <p><strong>Description <br> " . $row['statement'] . " <br><br><br> </strong></p>
+                <p><strong>Sample Input <br>" . $row['sample_input'] . "<br><br><br> </strong> </p>
+                <p><strong>Sample Output: <br>". $row['sample_output'] ."<br><br><br> </strong> </p>
+                <p><strong>Notes:</strong> <br>". $row['notes']. "</p>
+
+                </div>";
+
+
+                ?>
+
+
 
             </div>
             <div class="col-md-8 right-column">

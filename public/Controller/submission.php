@@ -14,7 +14,7 @@ if (isset($_POST['testCase']) && isset($_POST['sourceCode']) && isset($_POST['la
   $memory = '100';
   $created_at = date('Y-m-d H:i:s');
   $updated_at = date('Y-m-d H:i:s');
-  $expectedOutput = "Y2FzZSA6IDENCkFDDQpjYXNlIDogMg0KQUMNCkFDDQpjYXNlIDogMw0KQUMNCkFDDQpBQw==";
+  $expectedOutput = base64_encode($_POST['expectedOutput']);
   // processing code
 
 
@@ -97,7 +97,7 @@ if (isset($_POST['testCase']) && isset($_POST['sourceCode']) && isset($_POST['la
    VALUES ('$token', '$sourceCode','$who', '$problem','$language','$verdict','$stderr','$time','$memory','$created_at','$updated_at')";
 
   if ($connect->query($sql) === TRUE) {
-    echo $verdict . " Congratulations";
+    echo $verdict ;
   } else {
     echo "Error: " . $sql . "<br>" . $connect->error;
   }
