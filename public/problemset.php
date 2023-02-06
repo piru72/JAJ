@@ -57,10 +57,11 @@
                        
 
                         while ($row = mysqli_fetch_array($result)) {
+                            $value = $row['id'];
                             echo "<tbody>
 						  <tr>
 						  <td>" . $row['id'] . "</td>
-						  <td>" . "<a href=\"problem.php\" >" . $row['title'] . "</a>" . "</td>
+						  <td>" . "<a href=\"problem.php?value=$value\" >" . $row['title'] . "</a>" . "</td>
 						  <td>" . 'Unsolved' . "</td>
 						  <td>" . 'Accuracy' . "</td>
                           <td>" . $row['UserName'] . "</td>

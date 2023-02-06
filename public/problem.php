@@ -27,8 +27,9 @@
                 <?php
 
                 include "./Database/Connection.php";
+                $value = urldecode($_GET['value']);
 
-                $query = "select title ,statement, sample_input, sample_output,notes from problem_sets where id = 1 ";
+                $query = "select title ,statement, sample_input, sample_output,notes from problem_sets where id = $value ";
                 $result = mysqli_query($connect, $query);
                 $row = mysqli_fetch_array($result);
 
