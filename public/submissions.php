@@ -40,7 +40,12 @@
 
                         include "./Database/Connection.php";
 
-                        $query = "select * , u.UserName  from submissions , users u  where u.id = submissions.who";
+                        $query = "select s.id,s.created_at,s.problem,s.verdict,s.time,s.memory , u.UserName,l.lang  
+                        from submissions s 
+                        join users u  
+                        on u.id = s.who 
+                        join languages l 
+                        on l.id = s.lang";
                         $result = mysqli_query($connect, $query);
 
                       
