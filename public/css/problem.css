@@ -1,18 +1,22 @@
 .left-column {
-    background-color: #f2f2f2;
-    padding: 20px;
-    height: 100vh;
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 100vh;
 
-    resize: horizontal;
-    overflow: auto;
+  resize: horizontal;
+  overflow: auto;
 }
 
 .right-column {
-    background-color: #ffffff;
-    padding: 20px;
-    height: 100vh;
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100vh;
 }
 
 .code-editor {
-    height: 60vh;
+  height: 60vh;
+}
+
+.btn-primary {
+  background-color: #722bff;
 }
