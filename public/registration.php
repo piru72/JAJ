@@ -1,10 +1,20 @@
 <?php
 require_once("./Database/Connection.php");
+// Load Config
+require_once '../config/config.php';
+require_once '../vendor/autoload.php';
+// Routes
+require_once '../routes/web.php';
+//require_once '../app/Router.php';
 
 // echo $_POST["FullName"];
 // echo $_POST["UserName"];
 // echo $_POST["Email"];
 // echo $_POST["password"];
+
+
+
+
 
 if (isset($_POST["FullName"])) {
 
@@ -84,7 +94,7 @@ if (isset($_POST["EmailSignIN"])) {
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="registration.php" method="post">
+            <form action="" method="post">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
