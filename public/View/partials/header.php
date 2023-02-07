@@ -7,25 +7,25 @@
         <div class="collapse navbar-collapse d-lg-flex" id="centeredNav">
             <a class="navbar-brand col-lg-3 me-0" href="#">JAJ</a>
             <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                <li class="nav-item">
+                <li class="nav-item" style="cursor:pointer">
                     <a class="nav-link" onclick="window.location.href='index.php'">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="cursor:pointer">
                     <a class="nav-link" onclick="window.location.href='problemset.php'">Problemset</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="cursor:pointer">
                     <a class="nav-link" onclick="window.location.href='leaderboard.php'">Leaderboard</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="cursor:pointer">
                     <a class="nav-link" onclick="window.location.href='submissions.php'">Submissions</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="cursor:pointer">
                     <a class="nav-link" onclick="window.location.href='createProblem.php'">Create</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="cursor:pointer">
                     <a class="nav-link" onclick="window.location.href='ide.php'">IDE</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="cursor:pointer">
                     <a class="nav-link" onclick="window.location.href='debugger.php'">Debugger</a>
                 </li>
             </ul>
