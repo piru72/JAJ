@@ -12,6 +12,7 @@
 
     <!-- Custom CSS-->
     <link rel="stylesheet" href="css/problem.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
                         <option value="71">Python (3.8.1)</option>
                     </select>
 
-                    <h4>Text Editor</h4>
+                    <h4>Code Editor</h4>
                     <textarea name="sourceCode" class="form-control code-editor"></textarea>
 
                     <div class="test-cases">
