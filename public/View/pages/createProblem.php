@@ -87,7 +87,7 @@
     submitForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const formData = new FormData(submitForm);
-        fetch('./Controller/createProblem.php', {
+        fetch('public/Controller/createProblem.php', {
                 method: 'post',
                 body: formData
             })
