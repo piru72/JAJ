@@ -1,48 +1,30 @@
-<!doctype html>
-<html lang="en">
+<?php require_once './View/layout/header.php'; ?>
+<!--Navigation Section-->
 
-<head>
-    <title>JAJ</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php include './View/partials/header.php'; ?>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Custom CSS-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/problemset.css">
-</head>
-
-<body>
-
-    <!--Navigation Section-->
-
-    <?php include './View/partials/header.php'; ?>
-
-    <!--End of Navigation Section-->
+<!--End of Navigation Section-->
 
 
-    <div class="container-fluid">
-        <div class="row" style="margin-top: 20px">
-            <div class="col-12 text-center" style="margin-right:30px;">
+<div class="container-fluid">
+    <div class="row" style="margin-top: 20px">
+        <div class="col-12 text-center" style="margin-right:30px;">
 
-                <h4>Problems</h4>
+            <h4>Problems</h4>
 
-                <div class="table-responsive">
-                    <table class="table table-striped">
-
-
-                        <?php
-
-                        include "./Database/Connection.php";
-
-                        $query = "select ps.id ,ps.title, u.UserName from problem_sets ps , users u where ps.author = u.id ";
-                        $result = mysqli_query($connect, $query);
+            <div class="table-responsive">
+                <table class="table table-striped">
 
 
-                        echo "
+                    <?php
+
+                    include "./Database/Connection.php";
+
+                    $query = "select ps.id ,ps.title, u.UserName from problem_sets ps , users u where ps.author = u.id ";
+                    $result = mysqli_query($connect, $query);
+
+
+                    echo "
 						<thead class=\"thead-light\">
                         <tr>
                             <th>Id</th>
@@ -54,11 +36,11 @@
                         </tr>
                         </thead>";
 
-                       
 
-                        while ($row = mysqli_fetch_array($result)) {
-                            $value = $row['id'];
-                            echo "<tbody>
+
+                    while ($row = mysqli_fetch_array($result)) {
+                        $value = $row['id'];
+                        echo "<tbody>
 						  <tr>
 						  <td>" . $row['id'] . "</td>
 						  <td>" . "<a href=\"problem.php?value=$value\" >" . $row['title'] . "</a>" . "</td>
@@ -69,20 +51,17 @@
 						  
 						</tr>
 						</tbody>";
-                        }
+                    }
 
-                        ?>
-
-
+                    ?>
 
 
 
-                    </table>
-                </div>
 
+
+                </table>
             </div>
+
         </div>
-
-</body>
-
-</html>
+    </div>
+    <?php require_once './View/layout/footer.php'; ?>

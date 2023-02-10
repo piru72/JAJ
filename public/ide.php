@@ -1,99 +1,79 @@
-<!DOCTYPE html>
-<html>
+<?php require_once './View/layout/header.php'; ?>
 
-<head>
-    <title>JAJ</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--Navigation Section-->
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<?php include './View/partials/header.php'; ?>
 
-    <!-- Custom CSS-->
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/ide.css">
-</head>
-
-<body>
-
-    <!--Navigation Section-->
-
-    <?php include './View/partials/header.php'; ?>
-
-    <!--End of Navigation Section-->
-    <div class="container-fluid">
-        <div class="row main">
-            <div class="col-md-4 left-column">
-                <div class="problem-details">
-                    <h4>Fetch From</h4>
-                    <select name="language" class="form-control">
-                        <option value="54">Codeforces</option>
-                        <option value="62">CodeChef</option>
-                        <option value="71">Toph</option>
-                    </select>
-                    <h4>Problem Code</h4>
-                    <textarea name="sourceCode" class="form-control"></textarea>
-                </div>
-
+<!--End of Navigation Section-->
+<div class="container-fluid">
+    <div class="row main">
+        <div class="col-md-4 left-column">
+            <div class="problem-details">
+                <h4>Fetch From</h4>
+                <select name="language" class="form-control">
+                    <option value="54">Codeforces</option>
+                    <option value="62">CodeChef</option>
+                    <option value="71">Toph</option>
+                </select>
+                <h4>Problem Code</h4>
+                <textarea name="sourceCode" class="form-control"></textarea>
             </div>
-            <div class="col-md-8 right-column">
-                <form id="submit-form">
 
-                    <h4>Select Language</h4>
+        </div>
+        <div class="col-md-8 right-column">
+            <form id="submit-form">
 
-                    <select name="language" class="form-control">
-                        <option value="54">C++ (GCC 9.2.0)</option>
-                        <option value="62">Java (OpenJDK 13.0.1)</option>
-                        <option value="71">Python (3.8.1)</option>
-                    </select>
+                <h4>Select Language</h4>
 
-                    <h4>Text Editor</h4>
-                    <textarea name="sourceCode" class="form-control code-editor"></textarea>
+                <select name="language" class="form-control">
+                    <option value="54">C++ (GCC 9.2.0)</option>
+                    <option value="62">Java (OpenJDK 13.0.1)</option>
+                    <option value="71">Python (3.8.1)</option>
+                </select>
 
-                    <div class="test-cases">
+                <h4>Text Editor</h4>
+                <textarea name="sourceCode" class="form-control code-editor"></textarea>
 
-                        <h4>Test Cases</h4>
+                <div class="test-cases">
 
-                        <div class="form-group">
+                    <h4>Test Cases</h4>
 
-                            <label>Input Test Case</label>
-                            <textarea name="testCase" class="form-control "></textarea>
+                    <div class="form-group">
 
-                        </div>
-
-                        <button class="btn btn-primary">Test</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-
-
+                        <label>Input Test Case</label>
+                        <textarea name="testCase" class="form-control "></textarea>
 
                     </div>
-                </form>
-                <iframe name="submit-iframe" style="display: none;"></iframe>
 
-            </div>
+                    <button class="btn btn-primary">Test</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+                </div>
+            </form>
+            <iframe name="submit-iframe" style="display: none;"></iframe>
+
         </div>
     </div>
+</div>
 
-    <script>
-        const submitForm = document.querySelector('#submit-form');
-        submitForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(submitForm);
-            fetch('./Controller/submission.php', {
-                    method: 'post',
-                    body: formData
-                })
-                .then(response => response.text())
-                .then(result => {
-                    alert(result);
+<script>
+    const submitForm = document.querySelector('#submit-form');
+    submitForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(submitForm);
+        fetch('./Controller/submission.php', {
+                method: 'post',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert(result);
 
-                });
-        });
-    </script>
+            });
+    });
+</script>
 
 
-</body>
-
-</html>
+<?php require_once './View/layout/footer.php'; ?>
