@@ -14,19 +14,19 @@
                     <a class="nav-link" href="<?php echo $routes->get('problemset')->getPath();  ?>">Problemset</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="window.location.href='leaderboard.php'">Leaderboard</a>
+                    <a class="nav-link" href="<?php echo $routes->get('leaderboard')->getPath();  ?>">Leaderboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="window.location.href='submissions.php'">Submissions</a>
+                    <a class="nav-link" href="<?php echo $routes->get('submissions')->getPath();  ?>">Submissions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="window.location.href='createProblem.php'">Create</a>
+                    <a class="nav-link" href="<?php echo $routes->get('create')->getPath();  ?>">Create</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="window.location.href='ide.php'">IDE</a>
+                    <a class="nav-link" href="<?php echo $routes->get('ide')->getPath();  ?>">IDE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" onclick="window.location.href='debugger.php'">Debugger</a>
+                    <a class="nav-link" href="<?php echo $routes->get('debugger')->getPath();  ?>">Debugger</a>
                 </li>
             </ul>
             <div class="d-lg-flex col-lg-3 justify-content-lg-end">
