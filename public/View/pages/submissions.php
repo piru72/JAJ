@@ -15,7 +15,7 @@
 
                     <?php
 
-                    include "./Database/Connection.php";
+                    include "../Database/Connection.php";
 
                     $query = "select s.id,s.created_at,s.problem,s.verdict,s.time,s.memory , u.UserName,l.lang  
                         from submissions s 

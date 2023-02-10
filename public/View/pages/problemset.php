@@ -14,7 +14,7 @@
 
                     <?php
 
-                    include "./Database/Connection.php";
+                    include "../Database/Connection.php";
 
                     $query = "select ps.id ,ps.title, u.UserName from problem_sets ps , users u where ps.author = u.id ";
                     $result = mysqli_query($connect, $query);

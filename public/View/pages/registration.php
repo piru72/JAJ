@@ -1,5 +1,5 @@
 <?php
-require_once("./Database/Connection.php");
+require_once("../Database/Connection.php");
 // Load Config
 require_once '../config/config.php';
 require_once '../vendor/autoload.php';
