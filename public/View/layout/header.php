@@ -15,3 +15,5 @@
 </head>
 
 <body>
+
+<?php require_once './View/components/navBar.php'; ?>

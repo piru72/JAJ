@@ -1,9 +1,5 @@
 <?php require_once './View/layout/header.php'; ?>
-<!--Navigation Section-->
 
-<?php include './View/partials/header.php'; ?>
-
-<!--End of Navigation Section-->
 
 <div class="container-fluid">
     <div class="row" style="margin-top: 20px">
