@@ -39,13 +39,13 @@
                         <div class="form-group">
 
                             <label>Problem Title(Required)</label>
-                            <textarea class="form-control " name="problemTitle"></textarea>
+                            <textarea class="form-control " name="problemTitle" required></textarea>
 
                         </div>
                         <div class="form-group">
 
                             <label>Problem Body(Required)</label>
-                            <textarea class="form-control " name="problemStatement" rows="6" style="height: 46vh;"></textarea>
+                            <textarea class="form-control " name="problemStatement" rows="6" style="height: 46vh; " required></textarea>
 
                         </div>
 
@@ -53,7 +53,7 @@
                         <div class="form-group">
 
                             <label>Note</label>
-                            <textarea class="form-control" name="note" rows="6"></textarea>
+                            <textarea class="form-control" name="note" rows="6" required></textarea>
 
                         </div>
                     </div>
@@ -62,19 +62,19 @@
                         <div class="form-group">
 
                             <label>Sample Input (Required)</label>
-                            <textarea class="form-control" name="sampleInput" rows="6"></textarea>
+                            <textarea class="form-control" name="sampleInput" rows="6" required></textarea>
 
                         </div>
                         <div class="form-group">
 
                             <label>Sample Output(Required)</label>
-                            <textarea class="form-control" name="sampleOutput" rows="6"></textarea>
+                            <textarea class="form-control" name="sampleOutput" rows="6" required></textarea>
 
                         </div>
 
                         <div class="mb-3">
                             <label for="" class="form-label">Standard Input</label>
-                            <textarea class="form-control" name="standerdInput" id="" rows="6"></textarea>
+                            <textarea class="form-control" name="standerdInput" id="" rows="6" required></textarea>
                         </div>
 
                         <div class="mb-3">
