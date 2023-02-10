@@ -5,11 +5,11 @@ define('SITE_NAME', 'JAJ');
 //App Root
 define('APP_ROOT', dirname(dirname(__FILE__)));
 define('URL_ROOT', '/');
-define('URL_SUBFOLDER', '');
+define('URL_SUBFOLDER', 'JAJ');
 
 //DB Params
-define('DB_HOST', 'your-host');
-define('DB_USER', 'your-username');
-define('DB_PASS', 'your-password');
-define('DB_NAME', 'your-db-name')
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'jaj')
 ?>
