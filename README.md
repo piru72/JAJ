@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/0add9abf-5958-45d9-bace-72764ca3a342.svg)](https://wakatime.com/badge/user/0a093f9a-51c9-4892-8ac1-1c52ad5136a8/project/0add9abf-5958-45d9-bace-72764ca3a342)
+
 # JAJ (Just Another Judge)
 
 An online judge to practice problems
