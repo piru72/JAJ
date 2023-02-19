@@ -6,15 +6,22 @@
 <div class="container-fluid">
   <div class="row" style="margin-top: 20px">
     <div class="col-8 text-center" style="margin-right:30px;">
-      <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='createProblem.php'">
-        <i class="fas fa-plus"></i> Add Problems
-      </button>
-      <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='problemset.php'">
-        <i class="fas fa-pen"></i> Solve Problems
-      </button>
-      <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='leaderboard.php'">
-        <i class="fas fa-trophy"></i> Leaderboard
-      </button>
+
+      <a href="<?php echo $routes->get('create')->getPath();  ?>">
+        <button class="btn btn-outline-secondary btn-lg btn-square m-1">
+          <i class="fas fa-plus"></i> Add Problems
+        </button>
+      </a>
+      <a href="<?php echo $routes->get('problemset')->getPath();  ?>">
+        <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='problemset.php'">
+          <i class="fas fa-pen"></i> Solve Problems
+        </button>
+      </a>
+      <a href="<?php echo $routes->get('leaderboard')->getPath();  ?>">
+        <button class="btn btn-outline-secondary btn-lg btn-square m-1" onclick="window.location.href='leaderboard.php'">
+          <i class="fas fa-trophy"></i> Leaderboard
+        </button>
+      </a>
     </div>
     <div class="col-3 d-flex justify-content-center" style="background-color: white; height: 60px; border-radius: 10px">
       <h5 style="margin-top: 20px"><i class="fas fa-bullhorn"></i> Announcements</h5>
