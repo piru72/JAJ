@@ -6,6 +6,7 @@ require_once '../vendor/autoload.php';
 // Routes
 require_once '../routes/web.php';
 //require_once '../app/Router.php';
+session_start();
 
 // echo $_POST["FullName"];
 // echo $_POST["UserName"];
@@ -47,12 +48,17 @@ if (isset($_POST["EmailSignIN"])) {
     $sql = "SELECT * FROM users WHERE Email = '$email' AND password = '$password'";
     $result = mysqli_query($connect, $sql);
 
+    $_SESSION['userEmail'] = $email;
+
     if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userEmail'] = $row['Email'];
+
+       
         $url = $routes->get('home')->getPath();
         header("Location: " . $url);
         exit;
     } else {
-
         echo "Wrong email or password";
     }
     mysqli_close($connect);
