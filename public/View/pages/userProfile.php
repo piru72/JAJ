@@ -1,18 +1,11 @@
-<?php require_once './View/layout/header.php'; ?>
 
+<?php require_once './View/layout/withoutCSSLinkedHeader.php'; ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Custom CSS-->
+<link rel="stylesheet" href="public/css/userProfile.css">
+<link rel="stylesheet" href="public/css/style.css">
+</head>
+<?php require_once './View/components/navBar.php'; ?>
 
 <!--Buttons Section-->
 <div class="container-fluid">
@@ -55,17 +48,21 @@
             </div>
         </div>
 
-        <div class="col-3 d-flex flex-column justify-content-center" style="background-color: white; height: auto; border-radius: 10px; overflow-y: auto;">
+        <div class="col-3 d-flex flex-column justify-content-center user-card" >
+            <?php
 
-            <img src="public/image/DP.png" class="img-fluid rounded" alt="">
-            <h5 style="margin-top: 20px"><i class="fas fa-bullhorn"></i> Announcements</h5>
-            <h6>Email</h6>
-            <h6>insititute</h6>
-            <h6>email</h6>
-            <h6>location</h6>
-            <h6>website</h6>
-            <h6>Last Seen 5 minutes ago</h6>
-            <h6>Joined on Date</h6>
+
+            echo '<img src="public/image/DP.png" class="img-fluid rounded" alt="">';
+            echo '<h5 style="margin-top: 20px"><i class="fas fa-bullhorn"></i> Announcements</h5>';
+            echo '<h6>Email</h6>';
+            echo '<h6>insititute</h6>';
+            echo '<h6>email</h6>';
+            echo '<h6>location</h6>';
+            echo '<h6>website</h6>';
+            echo '<h6>Last Seen 5 minutes ago</h6>';
+            echo '<h6>Joined on Date</h6>';
+
+            ?>
 
 
 

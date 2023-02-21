@@ -1,6 +1,6 @@
 <footer>
     <p>
-      Made with <i class="fa fa-heart"></i> by Freon Devs
+      Made with <i class="fa fa-heart"></i> 
     </p>
   </footer>
   
