@@ -17,6 +17,9 @@
 
                 <div class="card-footer">
                     <p class="text-muted">Author: JAJ</p>
+
+                    <?php 
+                    echo $_SESSION['userEmail'] ?>
                     <p class="text-muted">Time: Jan 15, 2023</p>
                 </div>
             </div>

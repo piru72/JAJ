@@ -63,7 +63,7 @@ if (isset($_SESSION['userEmail'])) {
 
                 <?php
 
-                if (isset($_SESSION['userEmail']) == "parvezdirom2000@gmail.com") {
+                if (isset($_SESSION['userEmail']) and $_SESSION['userEmail'] == "parvezdirom2000@gmail.com") {
                 ?>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $routes->get('admin')->getPath();  ?>" >Admin</a>

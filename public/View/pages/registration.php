@@ -81,7 +81,7 @@ if (isset($_POST["EmailSignIN"])) {
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="registration.php" method="post">
+            <form action="" method="post">
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
