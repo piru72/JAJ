@@ -35,27 +35,43 @@ if (isset($_SESSION['userEmail'])) {
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $routes->get('leaderboard')->getPath();  ?>">Leaderboard</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo $routes->get('submissions')->getPath();  ?>">Submissions</a>
-                </li>
-                
+
+
                 <?php
 
                 if (isset($_SESSION['userEmail'])) {
                 ?>
-            
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $routes->get('submissions')->getPath();  ?>">Submissions</a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $routes->get('create')->getPath();  ?>">Create</a>
                     </li>
                 <?php
                 }
                 ?>
+
+
+
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $routes->get('ide')->getPath();  ?>">IDE</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $routes->get('debugger')->getPath();  ?>">Debugger</a>
                 </li>
+
+                <?php
+
+                if (isset($_SESSION['userEmail']) == "parvezdirom2000@gmail.com") {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $routes->get('admin')->getPath();  ?>" >Admin</a>
+                    </li>
+
+                <?php
+                }
+                ?>
             </ul>
             <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                 <?php

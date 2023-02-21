@@ -42,4 +42,8 @@ class HomeController
   {
     require_once APP_ROOT . '/public/view/pages/registration.php';
   }
+  public function indexAdmin(RouteCollection $routes)
+  {
+    require_once APP_ROOT . '/public/view/pages/admin.php';
+  }
 }
