@@ -16,6 +16,7 @@ $routes->add('create', new Route(constant('URL_SUBFOLDER') . '/create', array('c
 $routes->add('ide', new Route(constant('URL_SUBFOLDER') . '/ide', array('controller' => 'HomeController', 'method' => 'indexIDE'), array()));
 $routes->add('debugger', new Route(constant('URL_SUBFOLDER') . '/debugger', array('controller' => 'HomeController', 'method' => 'indexDebugger'), array()));
 $routes->add('user', new Route(constant('URL_SUBFOLDER') . '/user/register', array('controller' => 'UserController', 'method' => 'index'), array()));
+$routes->add('registration', new Route(constant('URL_SUBFOLDER') . '/registration', array('controller' => 'HomeController', 'method' => 'indexRegistration'), array()));
 // $routes->add('api_post_edit', '/api/posts/{id}')
 //   ->controller([BlogApiController::class, 'edit'])
 //   ->methods(['PUT']);

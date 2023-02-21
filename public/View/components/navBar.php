@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg bg-light rounded">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#centeredNav" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +30,7 @@
                 </li>
             </ul>
             <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                <button onclick="window.location.href='registration.php'" class="btn btn-primary">Sign In</button>
+                <a class="btn btn-primary btn-lg" href="<?php echo $routes->get('registration')->getPath();  ?>" role="button">Sign In</a>
             </div>
         </div>
     </div>
