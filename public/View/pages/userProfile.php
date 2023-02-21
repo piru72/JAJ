@@ -1,4 +1,3 @@
-
 <?php require_once './View/layout/withoutCSSLinkedHeader.php'; ?>
 
 <!-- Custom CSS-->
@@ -48,23 +47,9 @@
             </div>
         </div>
 
-        <div class="col-3 d-flex flex-column justify-content-center user-card" >
-            <?php
+        <div class="col-3 d-flex flex-column justify-content-center user-card">
 
-
-            echo '<img src="public/image/DP.png" class="img-fluid rounded" alt="">';
-            echo '<h5 style="margin-top: 20px"><i class="fas fa-bullhorn"></i> Announcements</h5>';
-            echo '<h6>Email</h6>';
-            echo '<h6>insititute</h6>';
-            echo '<h6>email</h6>';
-            echo '<h6>location</h6>';
-            echo '<h6>website</h6>';
-            echo '<h6>Last Seen 5 minutes ago</h6>';
-            echo '<h6>Joined on Date</h6>';
-
-            ?>
-
-
+            <?php require_once '../public/Controller/userDataShowController.php'; ?>
 
         </div>
 
