@@ -48,7 +48,8 @@ if (isset($_POST["EmailSignIN"])) {
     $result = mysqli_query($connect, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-        header("Location: index.php");
+        $url = $routes->get('home')->getPath();
+        header("Location: " . $url);
         exit;
     } else {
 
