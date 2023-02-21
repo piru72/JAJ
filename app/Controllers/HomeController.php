@@ -38,4 +38,18 @@ class HomeController
   {
     require_once APP_ROOT . '/public/view/pages/debugger.php';
   }
+  public function indexRegistration(RouteCollection $routes)
+  {
+    require_once APP_ROOT . '/public/view/pages/registration.php';
+  }
+  public function indexAdmin(RouteCollection $routes)
+  {
+    require_once APP_ROOT . '/public/view/pages/admin.php';
+  }
+
+  public function indexUserProfile(RouteCollection $routes)
+  {
+    require_once APP_ROOT . '/public/view/pages/userProfile.php';
+  }
+
 }
