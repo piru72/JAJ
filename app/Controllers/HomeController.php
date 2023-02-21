@@ -46,4 +46,10 @@ class HomeController
   {
     require_once APP_ROOT . '/public/view/pages/admin.php';
   }
+
+  public function indexUserProfile(RouteCollection $routes)
+  {
+    require_once APP_ROOT . '/public/view/pages/userProfile.php';
+  }
+
 }

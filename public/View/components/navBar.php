@@ -66,12 +66,25 @@ if (isset($_SESSION['userEmail'])) {
                 if (isset($_SESSION['userEmail']) and $_SESSION['userEmail'] == "parvezdirom2000@gmail.com") {
                 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $routes->get('admin')->getPath();  ?>" >Admin</a>
+                        <a class="nav-link" href="<?php echo $routes->get('admin')->getPath();  ?>">Admin</a>
                     </li>
 
                 <?php
                 }
                 ?>
+
+                <?php
+
+                if (isset($_SESSION['userEmail'])) {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $routes->get('userProfile')->getPath();  ?>">Profile</a>
+                    </li>
+                <?php
+                }
+                ?>
+
+
             </ul>
             <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                 <?php
