@@ -9,15 +9,9 @@
 
             <div class="table-responsive">
                 <table class="table table-striped">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">Rank</th>
-                            <th scope="col">Handle</th>
-                            <th scope="col">Full Name</th>
-                            <th scope="col">Institutions</th>
-                            <th scope="col">Solved</th>
-                        </tr>
-                    </thead>
+
+                    <?php require_once '../public/Controller/leaderBoardController.php'; ?>
+
                 </table>
             </div>
 
