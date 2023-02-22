@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Heatmap.js Example</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://www.patrick-wied.at/static/heatmapjs/assets/js/heatmap.min.js"></script>
+	<script src="https://www.patrick-wied.at/static/heatmapjs/assets/js/heatmap-leaflet.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Github-like heatmap using heatmap.js</h2>
+		<div id="heatmapContainer" style="height: 500px; width: 100%;"></div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// create heatmap instance
+			var heatmapInstance = h337.create({
+				container: document.getElementById('heatmapContainer'),
+				radius: 20
+			});
+
+			// define data points
+			var dataPoints = [
+				{ x: 100, y: 200, value: 10 },
+				{ x: 150, y: 300, value: 20 },
+				{ x: 200, y: 400, value: 30 },
+				{ x: 250, y: 500, value: 40 },
+				{ x: 300, y: 600, value: 50 },
+				{ x: 350, y: 700, value: 60 },
+				{ x: 400, y: 800, value: 70 },
+				{ x: 450, y: 900, value: 80 },
+				{ x: 500, y: 1000, value: 90 },
+				{ x: 550, y: 1100, value: 100 },
+			];
+
+			// add data points to heatmap instance
+			heatmapInstance.addData(dataPoints);
+		});
+	</script>
+</body>
+</html>
