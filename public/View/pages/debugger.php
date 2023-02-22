@@ -55,19 +55,55 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
 <script>
     const submitForm = document.querySelector('#submit-form');
     const createPath = '<?php echo $routes->get('debugSubmit')->getPath(); ?>';
 
+    function showRotatingAlert(message) {
+        var dialog = $("<div>" + message + "</div>")
+            .css({
+                "background-color": "black",
+                "color": "white",
+                "text-align": "center",
+                "padding": "10px"
+            })
+
+            .dialog({
+                resizable: false,
+                draggable: false,
+                modal: true,
+                position: {
+                    my: "top",
+                    at: "top",
+                    of: window
+                },
+                show: {
+                    effect: "rotate",
+                    duration: 500
+                },
+                hide: {
+                    effect: "rotate",
+                    duration: 500
+                }
+            });
+        return dialog;
+    }
+
+
+
     submitForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const formData = new FormData(submitForm);
+        const judgingDialog = showRotatingAlert("Judging...");
         fetch(createPath, {
                 method: 'post',
                 body: formData
             })
             .then(response => response.text())
             .then(result => {
+                judgingDialog.dialog("close");
                 alert(result);
 
             });
