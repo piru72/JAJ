@@ -10,7 +10,7 @@
             // $id = isset($_GET['id']) ? (int)$_GET['id'] : null;
             // $id = $routes->get('problem')->getParam('id');
             //$value = urldecode($_GET['value']);
-            $value = 1;
+            $value = 9;
 
             $query = "select title ,statement, sample_input, sample_output,notes from problem_sets where id = $value ";
             $result = mysqli_query($connect, $query);
@@ -49,16 +49,11 @@
 
                 <div class="test-cases">
 
-                    <h4>Test Cases</h4>
+                    <h4>Submit Answer</h4>
 
-                    <div class="form-group">
+                    
 
-                        <label>Input Test Case</label>
-                        <textarea name="testCase" class="form-control "></textarea>
-
-                    </div>
-
-                    <button class="btn btn-primary">Test</button>
+                    
                     <button type="submit" class="btn btn-primary">Submit</button>
 
 
@@ -70,13 +65,12 @@
         </div>
     </div>
 </div>
-
 <script>
     const submitForm = document.querySelector('#submit-form');
     submitForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const formData = new FormData(submitForm);
-        fetch('./Controller/submission.php', {
+        fetch('../public/Controller/submission.php', {
                 method: 'post',
                 body: formData
             })

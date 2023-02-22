@@ -16,7 +16,7 @@ if (isset($_POST['problemTitle']) && isset($_POST['problemStatement']) && isset(
     $created_at = date('Y-m-d H:i:s');
     $updated_at = date('Y-m-d H:i:s');
     $author = 1;
-    
+
     $sql = "INSERT INTO `problem_sets` (`title`, `statement`, `notes`, `sample_input`, `sample_output`, `standerd_input`, `standerd_output`, `cpu_limit`, `mem_limit`, `source_limit`, `created_at`, `updated_at`, `author`) VALUES ('$problemTitle', '$problemStatement', '$note', '$sampleInput', '$sampleOutput', '$standerdInput', '$standerdOutput', '$cpu_limit', '$memory_limit', '$source_limit', '$created_at', '$updated_at', '$author')";
 
 
@@ -27,11 +27,6 @@ if (isset($_POST['problemTitle']) && isset($_POST['problemStatement']) && isset(
     } else {
         echo "Error: " . $sql . "<br>" . $connect->error;
     }
-
-
-
-
-    echo "Cutiee";
 } else {
     echo "error";
     echo $_POST['problemTitle'];

@@ -54,9 +54,9 @@ if (isset($_SESSION['userEmail'])) {
 
 
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="<?php echo $routes->get('ide')->getPath();  ?>">IDE</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $routes->get('debugger')->getPath();  ?>">Debugger</a>
                 </li>
