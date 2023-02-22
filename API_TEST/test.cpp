@@ -17,3 +17,16 @@ int32_t main()
 
     return 0;
 }
+
+3
+1 2 3
+
+case : 1
+AC
+case : 2
+AC
+AC
+case : 3
+AC
+AC
+AC
