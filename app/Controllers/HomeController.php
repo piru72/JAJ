@@ -56,4 +56,9 @@ class HomeController
   {
     require_once APP_ROOT . "/public/view/pages/problem.php";
   }
+
+  public function indexDebug(RouteCollection $routes)
+  {
+    require_once APP_ROOT . "/public/Controller/submission.php";
+  }
 }

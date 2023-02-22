@@ -20,6 +20,7 @@ $routes->add('registration', new Route(constant('URL_SUBFOLDER') . '/registratio
 $routes->add('admin', new Route(constant('URL_SUBFOLDER') . '/admin', array('controller' => 'HomeController', 'method' => 'indexAdmin'), array()));
 $routes->add('userProfile', new Route(constant('URL_SUBFOLDER') . '/profile', array('controller' => 'HomeController', 'method' => 'indexUserProfile'), array()));
 $routes->add('problem', new Route(constant('URL_SUBFOLDER') . '/problem', array('controller' => 'HomeController', 'method' => 'indexProblem'), array()));
+$routes->add('debugSubmit', new Route(constant('URL_SUBFOLDER') . '/debugSubmit', array('controller' => 'HomeController', 'method' => 'indexDebug'), array()));
 // $routes->add('api_post_edit', '/api/posts/{id}')
 //   ->controller([BlogApiController::class, 'edit'])
 //   ->methods(['PUT']);

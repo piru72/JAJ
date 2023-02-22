@@ -1,5 +1,4 @@
 <?php
-
 require_once("DatabaseConnection.php");
 if (isset($_POST['testCase']) && isset($_POST['sourceCode']) && isset($_POST['language'])) {
   $testCases = base64_encode($_POST['testCase']);

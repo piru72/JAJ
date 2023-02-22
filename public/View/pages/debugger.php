@@ -57,10 +57,12 @@
 
 <script>
     const submitForm = document.querySelector('#submit-form');
+    const createPath = '<?php echo $routes->get('debugSubmit')->getPath(); ?>';
+
     submitForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const formData = new FormData(submitForm);
-        fetch('./Controller/submission.php', {
+        fetch(createPath, {
                 method: 'post',
                 body: formData
             })
